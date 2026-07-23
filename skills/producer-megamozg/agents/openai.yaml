@@ -1,0 +1,4 @@
+interface:
+  display_name: "Producer Megamozg"
+  short_description: "Ведёт эксперта от стратегии и ЦА до продукта, запуска и продаж."
+  default_prompt: "Помоги собрать стратегию роста и план внедрения для моего экспертного проекта."
