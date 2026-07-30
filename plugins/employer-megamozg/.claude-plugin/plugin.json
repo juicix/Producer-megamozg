@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "employer-megamozg",
+  "displayName": "Рабочий мегамозг",
+  "version": "1.0.0",
+  "description": "Персональный рабочий кабинет для контента, клиентских разборов, маркетинга, продаж, упаковки профиля и управления экспертным бизнесом.",
+  "author": {
+    "name": "juicix"
+  },
+  "repository": "https://github.com/juicix/Producer-megamozg",
+  "keywords": [
+    "marketing",
+    "content",
+    "sales",
+    "expert-business",
+    "russian"
+  ]
+}
