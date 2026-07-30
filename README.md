@@ -33,7 +33,8 @@
 Готовые архивы:
 
 - [плагин Claude v1.0.0](dist/employer-megamozg-plugin-v1.0.0.zip);
-- [комплект файлов Claude Project](dist/employer-megamozg-project-kit-v1.0.0.zip).
+- [комплект файлов Claude Project](dist/employer-megamozg-project-kit-v1.0.0.zip);
+- [двухстраничная памятка работодателю](output/pdf/Claude_Рабочий_мегамозг_памятка.pdf).
 
 Установка:
 
