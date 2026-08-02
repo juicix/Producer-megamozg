@@ -18,7 +18,7 @@ Assert-True ($manifest.version -match '^\d+\.\d+\.\d+$') 'Version must use semve
 
 $skillRoot = Join-Path $PluginRoot 'skills'
 $skills = @(Get-ChildItem -LiteralPath $skillRoot -Directory)
-Assert-True ($skills.Count -eq 7) "Expected 7 skills, found $($skills.Count)"
+Assert-True ($skills.Count -eq 12) "Expected 12 skills, found $($skills.Count)"
 
 foreach ($skill in $skills) {
     $skillFile = Join-Path $skill.FullName 'SKILL.md'
@@ -37,6 +37,6 @@ Assert-True ($transcripts.Count -eq 13) "Expected 13 transcripts, found $($trans
 
 $projectTemplateRoot = Join-Path -Path $PluginRoot -ChildPath "assets\project-template"
 $projectFiles = @(Get-ChildItem -LiteralPath $projectTemplateRoot -File)
-Assert-True ($projectFiles.Count -eq 13) "Expected 13 Project files, found $($projectFiles.Count)"
+Assert-True ($projectFiles.Count -eq 14) "Expected 14 Project files, found $($projectFiles.Count)"
 
 Write-Output "OK: plugin=$($manifest.name) version=$($manifest.version) skills=$($skills.Count) transcripts=$($transcripts.Count) project_files=$($projectFiles.Count)"

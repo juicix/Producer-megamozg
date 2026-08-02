@@ -2,3 +2,4 @@ producer-megamozg-claude-skill.zip
 test-install/
 test-install-*/
 tmp/
+plugins/employer-megamozg/skills/*/agents/
