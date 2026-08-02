@@ -79,7 +79,7 @@ def footer(c: canvas.Canvas) -> None:
     c.setFont("UI", 8.5)
     c.setFillColor(MUTED)
     c.drawString(MARGIN, 18, "Рабочий мегамозг для Claude Pro")
-    c.drawRightString(PAGE_W - MARGIN, 18, "Версия 1.1.0")
+    c.drawRightString(PAGE_W - MARGIN, 18, "Версия 1.2.0")
 
 
 def pill(c: canvas.Canvas, x: float, y: float, number: str, title: str,
@@ -153,7 +153,8 @@ def page_one(c: canvas.Canvas) -> None:
         ("5", "Кастдев и аудитория"), ("6", "Лид-магнит / воронка"),
         ("7", "Прогрев"), ("8", "Диалог и возражение"),
         ("9", "Упаковка профиля"), ("10", "Состояние бизнеса"),
-        ("11", "Разобрать новый файл"), ("0", "Своя задача"),
+        ("11", "Разобрать новый файл"), ("12", "Threads: посты и воронка"),
+        ("0", "Своя задача"),
     ]
     for index, (number, text) in enumerate(items):
         row = index // 2
@@ -252,9 +253,10 @@ def page_two(c: canvas.Canvas) -> None:
     c.setFillColor(HexColor("#DCE2EC"))
     c.drawString(MARGIN + 17, 124, "НАСТРОЙКА | ОБНОВИТЬ БАЗУ | ПРОВЕРЬ ПЕРЕД ПУБЛИКАЦИЕЙ")
     c.drawString(MARGIN + 17, 106, "ДЕНЬ | НЕДЕЛЯ | РАЗБОР НЕДЕЛИ | ЧТО Я УПУСКАЮ")
+    c.drawString(MARGIN + 17, 88, "THREADS НЕДЕЛЯ | THREADS ПОСТЫ | THREADS РАЗБОР")
     c.setFont("UI-Bold", 9.2)
     c.setFillColor(white)
-    c.drawString(MARGIN + 17, 78, "Для клиентов: один чат - один клиент.")
+    c.drawString(MARGIN + 17, 68, "Для клиентов: один чат - один клиент.")
     footer(c)
     c.showPage()
 
@@ -263,7 +265,7 @@ def main() -> None:
     register_fonts()
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     c = canvas.Canvas(str(OUTPUT), pagesize=A4)
-    c.setTitle("Рабочий мегамозг для Claude Pro - памятка v1.1")
+    c.setTitle("Рабочий мегамозг для Claude Pro - памятка v1.2")
     c.setAuthor("juicix")
     page_one(c)
     page_two(c)
