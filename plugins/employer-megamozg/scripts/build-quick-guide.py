@@ -79,7 +79,7 @@ def footer(c: canvas.Canvas) -> None:
     c.setFont("UI", 8.5)
     c.setFillColor(MUTED)
     c.drawString(MARGIN, 18, "Рабочий мегамозг для Claude Pro")
-    c.drawRightString(PAGE_W - MARGIN, 18, "Версия 1.0.0")
+    c.drawRightString(PAGE_W - MARGIN, 18, "Версия 1.1.0")
 
 
 def pill(c: canvas.Canvas, x: float, y: float, number: str, title: str,
@@ -192,7 +192,7 @@ def info_box(c: canvas.Canvas, x: float, y: float, w: float, h: float,
 def page_two(c: canvas.Canvas) -> None:
     c.setFillColor(PAPER)
     c.rect(0, 0, PAGE_W, PAGE_H, fill=1, stroke=0)
-    header(c, 2, "КАК НЕ СЛОМАТЬ СИСТЕМУ")
+    header(c, 2, "ПРАВИЛА И БЫСТРЫЕ КОМАНДЫ")
 
     y = PAGE_H - 125
     c.setFillColor(INK)
@@ -244,13 +244,17 @@ def page_two(c: canvas.Canvas) -> None:
         y -= 56
 
     c.setFillColor(INK)
-    c.roundRect(MARGIN, 52, PAGE_W - 2 * MARGIN, 78, 14, fill=1, stroke=0)
+    c.roundRect(MARGIN, 52, PAGE_W - 2 * MARGIN, 116, 14, fill=1, stroke=0)
     c.setFillColor(white)
     c.setFont("UI-Bold", 11)
-    c.drawString(MARGIN + 17, 108, "Готовая команда для обновления базы")
-    c.setFont("UI", 9.2)
-    command = "Это подтверждённая информация. Подготовь фрагмент и скажи, в какой файл Project его добавить."
-    draw_lines(c, command, MARGIN + 17, 87, PAGE_W - 2 * MARGIN - 34, size=9.2, color=HexColor("#DCE2EC"), leading=12)
+    c.drawString(MARGIN + 17, 145, "Быстрые команды")
+    c.setFont("UI", 8.8)
+    c.setFillColor(HexColor("#DCE2EC"))
+    c.drawString(MARGIN + 17, 124, "НАСТРОЙКА | ОБНОВИТЬ БАЗУ | ПРОВЕРЬ ПЕРЕД ПУБЛИКАЦИЕЙ")
+    c.drawString(MARGIN + 17, 106, "ДЕНЬ | НЕДЕЛЯ | РАЗБОР НЕДЕЛИ | ЧТО Я УПУСКАЮ")
+    c.setFont("UI-Bold", 9.2)
+    c.setFillColor(white)
+    c.drawString(MARGIN + 17, 78, "Для клиентов: один чат - один клиент.")
     footer(c)
     c.showPage()
 
@@ -259,7 +263,7 @@ def main() -> None:
     register_fonts()
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     c = canvas.Canvas(str(OUTPUT), pagesize=A4)
-    c.setTitle("Рабочий мегамозг для Claude Pro - памятка")
+    c.setTitle("Рабочий мегамозг для Claude Pro - памятка v1.1")
     c.setAuthor("juicix")
     page_one(c)
     page_two(c)
